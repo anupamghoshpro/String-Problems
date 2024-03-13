@@ -104,7 +104,6 @@ std::string decodeMorse(const std::string& morseCode)
     std::string travStr = morseCode;
     std::string decoded;
     std::string WordSpace = "   ";
-    std::string tab = " ";
     std::string morseCodeLetter;
     std::stringstream ss;
     const std::string ignoreSpace = " \t\n\r\f\v";

@@ -26,6 +26,11 @@ std::size_t duplicateCount(const std::string& in)
   {
     occuranceCount[tolower(c)]++;
   }
+
+  if(in.length() == occuranceCount.size())
+  {
+      return 0;
+  }
   
   return std::count_if(occuranceCount.begin(), occuranceCount.end(), [](const auto &occuranceCount){return occuranceCount.second > 1;});
 }

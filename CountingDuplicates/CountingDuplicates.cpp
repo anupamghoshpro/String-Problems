@@ -27,6 +27,10 @@ std::size_t duplicateCount(const std::string& in)
     occuranceCount[tolower(c)]++;
   }
 
+  /* 
+  If there is no duplicate the string length 
+  and the map size will be same.
+  */
   if(in.length() == occuranceCount.size())
   {
       return 0;

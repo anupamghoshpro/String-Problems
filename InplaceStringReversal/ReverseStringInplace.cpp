@@ -2,8 +2,15 @@
 Reverse the words of a sentence in place.
 
 e.g.
-Input: “the sky is blue”
-Output: “blue is sky the”
+Input: "    The quick brown  fox      jumps over      the lazy  dog!       "
+Output: "       !dog  lazy the      over jumps      fox  brown quick The    "
+
+Input: “The sky is blue.”
+Output: “.blue is sky The”
+
+Input: "     Does this     program work?  "
+Output: "  ?work program     this Does     "
+
 NOTE: This is NOT the same as reversing the entire string.
 */
 

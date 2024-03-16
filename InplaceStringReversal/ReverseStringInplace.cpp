@@ -19,12 +19,13 @@ void ReverseWordsInString(std::string& str)
     
     size_t wordStartIndex = 0;
     size_t wordEndindex = 0;
+    std::string punctuations = " \t,;.!?";
     
-    while((wordStartIndex = str.find_first_not_of(" \t", wordStartIndex)) != std::string::npos)
+    while((wordStartIndex = str.find_first_not_of(punctuations, wordStartIndex)) != std::string::npos)
     {
-        if((wordEndindex = str.find_first_of(" \t", wordStartIndex)) == std::string::npos)
+        if((wordEndindex = str.find_first_of(punctuations, wordStartIndex)) == std::string::npos)
         {
-            wordEndindex = str.length();
+            wordEndindex = str.length() - 1;
         }
         
         std::reverse(str.begin() + wordStartIndex, str.begin() + wordEndindex);
@@ -36,14 +37,15 @@ void ReverseWordsInString(std::string& str)
 
 int main()
 {
-    std::string str {"    The quick brown  fox      jumps over      the lazy  dog!    "};
-    std::string str1 {"The sky is blue!"};
+    std::string str {"    The quick brown  fox      jumps over      the lazy  dog!       "};
+    std::string str1 {"The sky is blue."};
+    std::string str2 {"Does this     program work?  "};
     ReverseWordsInString(str);
-    ReverseWordsInString(str1);
+    //ReverseWordsInString(str1);
+    //ReverseWordsInString(str2);
     std::cout << str << std::endl;
     std::cout << str1 << std::endl;
+    std::cout << str2 << std::endl;
 
     return 0;
 }
-
-
